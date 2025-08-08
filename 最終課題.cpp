@@ -7,8 +7,7 @@
 #include <sstream>
 #include <iomanip>
 #include <map>
-#include <cstdio> // ★ remove() 用
-
+#include <cstdio> 
 using namespace std;
 
 class kessai {
@@ -29,7 +28,7 @@ public:
     int getAmount() const { return amount; }
 
     string getMonth() const {
-        return date.substr(0, 7); // YYYY-MM-DD → YYYY-MM
+        return date.substr(0, 7); 
     }
 
     string toCSV() const {
@@ -114,7 +113,6 @@ public:
         cout << "ファイルから読み込みました。\n";
     }
 
-    // ★ ファイル削除機能（remove()バージョン）
     void deleteFile(const string& filename) {
         {
         ifstream ifs(filename);
@@ -141,7 +139,6 @@ public:
     }
 };
 
-// 日付入力の簡易バリデーション
 string inputDate() {
     string date;
     while (true) {
